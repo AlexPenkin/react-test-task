@@ -1,0 +1,56 @@
+.PostsPage {
+  height: 100%;
+  max-height: 100%;
+}
+
+.PostsPageLayout {
+  display: flex;
+  padding: 20px 20px 0;
+  height: calc(100vh - 20px);
+
+  &__left {
+    width: 300px;
+    max-width: 300px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid gray;
+    padding: 0 8px;
+    box-sizing: border-box;
+    & > *:not(:last-child) {
+      margin-bottom: 8px;
+    }
+    .Input {
+      padding: 15px 10px;
+      line-height: 20px;
+    }
+  }
+  &__right {
+    box-sizing: border-box;
+    width: calc(100% - 300px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 0 8px;
+    & > *:not(:last-child) {
+      margin-bottom: 8px;
+    }
+    .Input {
+      padding: 15px 10px;
+      line-height: 20px;
+    }
+    .PostsToolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &__order {
+        display: flex;
+        width: 140px;
+        justify-content: space-between;
+      }
+      .Input {
+        width: 500px;
+      }
+    }
+  }
+}
